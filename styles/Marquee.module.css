@@ -1,0 +1,33 @@
+.anim {
+    position: absolute;
+    will-change: transform;
+    animation: marquee 15s linear infinite ;
+}
+
+.anim:hover {
+    animation-play-state: paused;
+}
+
+/* HERE IS MINE UPDATED CODE */
+
+/* Marquee.module.css */
+.marquee-container {
+  display: flex;
+  justify-content: flex-start;
+  animation: marquee 20s linear infinite; /* 20s animation, adjust speed as needed */
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 1rem; /* Adjust the gap between items */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%); /* Start from right */
+  }
+  100% {
+    transform: translateX(-100%); /* End at left */
+  }
+}
